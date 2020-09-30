@@ -1,0 +1,50 @@
+html {
+    font-size: 13px;
+
+    @include breakpoint-min(768px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    overflow: auto;
+    color: $font-black;
+    background-color: $body-bg;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.4px;
+}
+
+.app {
+    position: relative;
+    min-height: 100vh;
+}
+
+.page {
+    min-height: 650px;
+}
+
+a {
+    text-decoration: none;
+    color: $font-black;
+    transition: all 0.3s ease;
+}
+
+.list {
+    li {
+        margin-bottom: 12px;
+    }
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: royalblue;
+    }
+
+    &-white {
+        color: #ffffff;
+    }
+}
