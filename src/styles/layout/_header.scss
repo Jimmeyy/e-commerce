@@ -1,0 +1,38 @@
+.header {
+    background: #333;
+    padding: 15px 30px;
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-logo {
+        a {
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0;
+        }
+    }
+
+    &-nav {
+        display: flex;
+
+        li {
+            margin: 0 28px;
+        }
+
+        a {
+            color: #ffffff;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+    }
+}
