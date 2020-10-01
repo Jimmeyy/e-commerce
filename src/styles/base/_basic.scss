@@ -10,7 +10,7 @@ body {
     overflow: auto;
     color: $font-black;
     background-color: $body-bg;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: -0.4px;
 }
 
@@ -36,12 +36,16 @@ a {
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     transition: all 0.3s ease;
 
     &:hover {
-        color: royalblue;
+        color: $primary-color;
+    }
+
+    &-black {
+        color: #0f0f0f;
     }
 
     &-white {

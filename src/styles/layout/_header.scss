@@ -1,17 +1,19 @@
 .header {
-    background: #333;
-    padding: 15px 30px;
+    background: #fafafa;
+    padding: 20px 30px;
 
     &-inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     &-logo {
         a {
             font-size: 30px;
-            color: #ffffff;
+            color: $font-black;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0;
@@ -22,13 +24,19 @@
         display: flex;
 
         li {
-            margin: 0 28px;
+            margin: 0 25px;
         }
 
         a {
-            color: #ffffff;
-            font-size: 0.9rem;
-            text-transform: uppercase;
+            font-size: 1rem;
+            color: $font-black;
+            font-weight: 600;
+
+            @include breakpoint-min(1201px) {
+                &:hover {
+                    color: $primary-color;
+                }
+            }
         }
     }
 

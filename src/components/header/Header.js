@@ -26,17 +26,17 @@ const Header = () => {
                 <ul className="header-buttons">
                     <li>
                         <button className="btn btn-icon">
-                            <BiSearch className="icon icon-white" />
+                            <BiSearch className="icon icon-black" />
                         </button>
                     </li>
                     <li>
                         <Link className="btn btn-icon">
-                            <BiUser className="icon icon-white" />
+                            <BiUser className="icon icon-black" />
                         </Link>
                     </li>
                     <li>
                         <Link className="btn btn-icon btn-margin-left">
-                            <BiShoppingBag className="icon icon-white" />
+                            <BiShoppingBag className="icon icon-black" />
                         </Link>
                     </li>
                 </ul>
