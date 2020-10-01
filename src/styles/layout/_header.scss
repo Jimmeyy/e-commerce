@@ -1,6 +1,6 @@
 .header {
     background: #fafafa;
-    padding: 20px 30px;
+    padding: 10px 30px 8px 30px;
 
     &-inner {
         display: flex;
@@ -8,6 +8,16 @@
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    &-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto 10px auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dadada;
     }
 
     &-logo {
@@ -37,6 +47,40 @@
                     color: $primary-color;
                 }
             }
+        }
+
+        &-small {
+            li {
+                margin: 0 15px 0 0;
+            }
+
+            a {
+                font-size: 0.9rem;
+                color: $font-black;
+                font-weight: 300;
+
+                @include breakpoint-min(1201px) {
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &-auth {
+        display: flex;
+        align-items: center;
+
+        &-divider {
+            display: inline-block;
+            margin: 0 5px;
+            line-height: 1rem;
+            font-weight: 300;
+        }
+
+        &-register {
+            color: $primary-color;
         }
     }
 

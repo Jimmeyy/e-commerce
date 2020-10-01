@@ -8,18 +8,6 @@
     cursor: pointer;
     transition: all 0.3s ease;
 
-    &-margin-left {
-        margin: 0 0 0 10px;
-    }
-
-    &-margin-right {
-        margin: 0 10px 0 0;
-    }
-
-    &-no-margin {
-        margin: 0;
-    }
-
     &-basic {
         font-size: 1.15rem;
         color: $primary-color;
@@ -40,5 +28,17 @@
 
     &-icon {
         padding: 6px;
+    }
+
+    &-margin-left {
+        margin: 0 0 0 10px;
+    }
+
+    &-margin-right {
+        margin: 0 10px 0 0;
+    }
+
+    &-no-margin {
+        margin: 0;
     }
 }

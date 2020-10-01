@@ -5,6 +5,24 @@ import { BiSearch, BiUser, BiShoppingBag } from 'react-icons/bi';
 const Header = () => {
     return (
         <header className="header">
+            <div className="header-bar">
+                <ul className="header-nav header-nav-small">
+                    <li>
+                        <Link>My account</Link>
+                    </li>
+                    <li>
+                        <Link>Checkout</Link>
+                    </li>
+                    <li>
+                        <Link>Cart</Link>
+                    </li>
+                </ul>
+                <div className="header-auth">
+                    <Link className="header-auth-login">Login</Link>
+                    <span className="header-auth-divider">|</span>
+                    <Link className="header-auth-register">Register</Link>
+                </div>
+            </div>
             <div className="header-inner">
                 <div className="header-logo">
                     <Link>Logo</Link>
