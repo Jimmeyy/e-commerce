@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BiSearch, BiUser, BiShoppingBag } from 'react-icons/bi';
+import {
+    BiSearch,
+    BiUser,
+    BiShoppingBag,
+    BiMenuAltRight,
+} from 'react-icons/bi';
 
 const Header = () => {
     return (
@@ -58,6 +63,11 @@ const Header = () => {
                         </Link>
                     </li>
                 </ul>
+                <div className="header-mobile">
+                    <button className="btn btn-icon btn-no-margin ">
+                        <BiMenuAltRight className="icon icon-black" />
+                    </button>
+                </div>
             </div>
         </header>
     );
