@@ -1,25 +1,45 @@
 .slide {
-    height: 600px;
+    height: 550px;
+    padding: 0 15px;
     background-color: #f2f2f2;
+
+    @include breakpoint-min(1201px) {
+        height: 600px;
+        padding: 0 30px;
+    }
 
     &-container {
         display: flex;
         align-items: center;
+        justify-content: center;
         max-width: 1200px;
         height: 100%;
         margin: 0 auto;
+
+        @include breakpoint-min(1201px) {
+            justify-content: flex-start;
+        }
     }
 
     &-content {
         max-width: 570px;
+        text-align: center;
+
+        @include breakpoint-min(1201px) {
+            text-align: left;
+        }
 
         h2 {
             margin-bottom: 0.3em;
             line-height: 1.15;
-            font-size: 4.375rem;
+            font-size: 3.375rem;
             font-weight: 300;
             color: $font-black;
             letter-spacing: 0;
+
+            @include breakpoint-min(1201px) {
+                font-size: 4.37rem;
+            }
         }
     }
 
@@ -31,8 +51,10 @@
 // Swiper overrides
 .swiper-container {
     .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
+        @include breakpoint-min(1201px) {
+            width: 11px;
+            height: 11px;
+        }
 
         &-active {
             background: $primary-color;
@@ -41,6 +63,19 @@
 
     .swiper-button-next,
     .swiper-button-prev {
+        display: none;
         color: $primary-color;
+
+        @include breakpoint-min(1201px) {
+            display: inline-block;
+        }
+    }
+
+    .swiper-button-next {
+        right: 30px;
+    }
+
+    .swiper-button-prev {
+        left: 30px;
     }
 }

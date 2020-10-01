@@ -26,9 +26,11 @@
         border: 2px solid $primary-color;
         background-color: transparent;
         padding: 12px;
-        width: 175px;
+        width: 150px;
 
         @include breakpoint-min(1201px) {
+            width: 175px;
+
             &:hover {
                 background-color: $primary-color;
                 color: $font-white;
