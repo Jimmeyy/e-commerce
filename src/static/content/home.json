@@ -1,0 +1,46 @@
+{
+    "slider": [
+        {
+            "heading": "Men Ezy <br /> Ankle Pants",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium qui saepe officiis consequatur voluptatum aut! Dolores error totam nulla. Ullam deleniti impedit mollitia dolorum rerum libero est modi, deserunt id.",
+            "buttons": [
+                {
+                    "buttonText": "Discover more",
+                    "buttonLink": ""
+                },
+                {
+                    "buttonText": "Read about",
+                    "buttonLink": ""
+                }
+            ]
+        },
+        {
+            "heading": "Men Ezy <br /> Ankle Pants 2",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium qui saepe officiis consequatur voluptatum aut! Dolores error totam nulla. Ullam deleniti impedit mollitia dolorum rerum libero est modi, deserunt id.",
+            "buttons": [
+                {
+                    "buttonText": "Discover more",
+                    "buttonLink": ""
+                },
+                {
+                    "buttonText": "Read about",
+                    "buttonLink": ""
+                }
+            ]
+        },
+        {
+            "heading": "Men Ezy <br /> Ankle Pants 3",
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium qui saepe officiis consequatur voluptatum aut! Dolores error totam nulla. Ullam deleniti impedit mollitia dolorum rerum libero est modi, deserunt id.",
+            "buttons": [
+                {
+                    "buttonText": "Discover more",
+                    "buttonLink": ""
+                },
+                {
+                    "buttonText": "Read about",
+                    "buttonLink": ""
+                }
+            ]
+        }
+    ]
+}
