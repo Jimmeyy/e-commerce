@@ -20,6 +20,22 @@
         margin: 0;
     }
 
+    &-basic {
+        font-size: 1.15rem;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+        background-color: transparent;
+        padding: 12px;
+        width: 175px;
+
+        @include breakpoint-min(1201px) {
+            &:hover {
+                background-color: $primary-color;
+                color: $font-white;
+            }
+        }
+    }
+
     &-icon {
         padding: 6px;
     }

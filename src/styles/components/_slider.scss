@@ -1,0 +1,46 @@
+.slide {
+    height: 600px;
+    background-color: #f2f2f2;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    &-content {
+        max-width: 570px;
+
+        h2 {
+            margin-bottom: 0.3em;
+            line-height: 1.15;
+            font-size: 4.375rem;
+            font-weight: 300;
+            color: $font-black;
+            letter-spacing: 0;
+        }
+    }
+
+    &-buttons {
+        margin-top: 20px;
+    }
+}
+
+// Swiper overrides
+.swiper-container {
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+
+        &-active {
+            background: $primary-color;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: $primary-color;
+    }
+}
