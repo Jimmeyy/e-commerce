@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import routes from 'static/routes';
 import {
     BiSearch,
     BiUser,
@@ -8,6 +9,8 @@ import {
 } from 'react-icons/bi';
 
 const Header = () => {
+    const { home, login } = routes;
+
     return (
         <header className="header">
             <div className="header-bar">
@@ -23,14 +26,14 @@ const Header = () => {
                     </li>
                 </ul>
                 <div className="header-auth">
-                    <Link className="header-auth-login">Login</Link>
+                    <Link to={login.path} className="header-auth-login">Login</Link>
                     <span className="header-auth-divider">|</span>
                     <Link className="header-auth-register">Register</Link>
                 </div>
             </div>
             <div className="header-inner">
                 <div className="header-logo">
-                    <Link>Logo</Link>
+                    <Link to={home.path}>Logo</Link>
                 </div>
                 <ul className="header-nav">
                     <li>

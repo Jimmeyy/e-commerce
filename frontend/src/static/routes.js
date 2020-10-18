@@ -3,6 +3,10 @@ const routes = {
         text: 'Home',
         path: '/',
     },
+    login: {
+        text: 'Login',
+        path: '/login',
+    }
 };
 
 export default routes;
