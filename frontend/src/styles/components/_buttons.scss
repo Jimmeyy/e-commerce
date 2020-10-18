@@ -9,19 +9,34 @@
     transition: all 0.3s ease;
 
     &-basic {
-        font-size: 1.15rem;
-        color: $primary-color;
+        font-size: 1rem;
+        color: $font-white;
         border: 2px solid $primary-color;
-        background-color: transparent;
-        padding: 12px;
-        width: 150px;
+        background-color: $primary-color;
+        padding: 15px 24px;
+        min-width: 150px;
+        border-radius: 6px;
+        font-weight: 700;
+        text-transform: uppercase;
 
         @include breakpoint-min(1201px) {
-            width: 175px;
+            min-width: 180px;
 
             &:hover {
-                background-color: $primary-color;
-                color: $font-white;
+                background-color: transparent;
+                color: $primary-color;
+            }
+        }
+
+        &.no-fill {
+            background-color: transparent;
+            color: $primary-color;
+
+            @include breakpoint-min(1201px) {
+                &:hover {
+                    background-color: $primary-color;
+                    color: $font-white;
+                }
             }
         }
     }

@@ -2,7 +2,7 @@
     background: #fafafa;
     padding: 8px 15px;
 
-    @include breakpoint-min(1201px) {
+    @include breakpoint-min(1001px) {
         padding: 10px 30px 12px 30px;
     }
 
@@ -12,6 +12,10 @@
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
+        
+        @include breakpoint-min(1201px) {
+            padding: 0 30px;
+        }
     }
 
     &-bar {
@@ -23,8 +27,9 @@
             align-items: center;
             max-width: 1200px;
             margin: 0 auto 12px auto;
-            padding-bottom: 10px;
+            padding: 0 30px 12px 30px;
             border-bottom: 1px solid #dadada;
+            
         }
     }
 
