@@ -1,5 +1,6 @@
 import React from 'react';
-import { TextInput, Button } from 'components';
+import { TextInput, Button, Checkbox } from 'components';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -17,6 +18,10 @@ const Login = () => {
                         </div>
                         <div className="form-footer">
                             {/* Password reminder link and remember me checkbox */}
+                            <Checkbox label='Remember me' />
+                            <p className="form-footer-text"> 
+                                Forgot <Link to="/">password ?</Link> 
+                            </p>
                         </div>
                     </form>
                 </div>

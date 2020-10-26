@@ -24,6 +24,21 @@
     &-footer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        .input-wrapper {
+            width: auto;
+            margin: 0;
+        }
+
+        &-text {
+            font-size: 14px;
+            font-weight: 600;
+
+            a {
+                color: $primary-color;
+            }
+        }
     }
 }
 
