@@ -1,0 +1,33 @@
+.page-banner {
+    background-color: #cccccc;
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        height: 360px;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 30px;
+    }
+
+    h1 {
+        position: relative;
+        z-index: 10;
+        font-size: 2.4rem;
+        color: $font-black;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            background-color: $primary-color;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+        }
+    }
+}
