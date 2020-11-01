@@ -1,1 +1,1 @@
-export { loginValidate } from './validation';
+export { loginValidate, registerValidate } from './validation';

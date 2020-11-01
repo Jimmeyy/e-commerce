@@ -6,6 +6,10 @@ const routes = {
     login: {
         text: 'Login',
         path: '/login',
+    },
+    register: {
+        text: 'Register',
+        path: '/register',
     }
 };
 

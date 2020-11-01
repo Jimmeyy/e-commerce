@@ -7,9 +7,10 @@ import {
     BiShoppingBag,
     BiMenuAltRight,
 } from 'react-icons/bi';
+import { registerValidate } from 'services';
 
 const Header = () => {
-    const { home, login } = routes;
+    const { home, login, register } = routes;
 
     return (
         <header className="header">
@@ -28,7 +29,7 @@ const Header = () => {
                 <div className="header-auth">
                     <Link to={login.path} className="header-auth-login">Login</Link>
                     <span className="header-auth-divider">|</span>
-                    <Link className="header-auth-register">Register</Link>
+                    <Link to={register.path} className="header-auth-register">Register</Link>
                 </div>
             </div>
             <div className="header-inner">

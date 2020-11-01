@@ -4,11 +4,12 @@ import './styles/main.scss';
 import routes from 'static/routes';
 import Home from 'pages/home';
 import Login from 'pages/login';
+import Register from 'pages/register';
 import Page404 from 'pages/page404';
 import { Footer, Header } from 'components';
 
 function App() {
-    const { home, login } = routes;
+    const { home, login, register } = routes;
 
     return (
         <div className="app">
@@ -20,6 +21,9 @@ function App() {
                     </Route>
                     <Route path={login.path}>
                         <Login />
+                    </Route>
+                    <Route path={register.path}>
+                        <Register />
                     </Route>
                     <Route>
                         <Page404 />
