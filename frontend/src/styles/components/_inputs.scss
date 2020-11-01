@@ -19,6 +19,11 @@
         outline: none;
     }
 
+    &-error {
+        font-size: 0.875rem;
+        color: red;
+    }
+
     &-checkbox {
         display: inline-flex;
         align-items: center;
