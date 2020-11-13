@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { TextInput, Button, Checkbox, PageBanner } from 'components';
 import { Link } from 'react-router-dom';
 import { Formik, Form } from 'formik';
@@ -7,7 +8,20 @@ import { registerValidate } from 'services';
 const Register = () => {
 
     const onSubmit = (values, actions) => {
-        console.log(values);
+        const userData = {
+            username: values.login,
+            email: values.email,
+            password: values.password,
+        }
+        axios.post(`${process.env.REACT_APP_API_URL}/auth/local/register`, userData)
+        .then(response => {
+            if (response.status == 200) {
+                alert('Register success');
+            }
+        })
+        .catch(error => {
+            alert(`Register failed: ${error.response.data.message[0].messages[0].message}`);
+        })
     }
 
     return (
@@ -32,8 +46,8 @@ const Register = () => {
                                 <div className="form-inputs">
                                     <TextInput name="login" placeholder="login" error={errors.login}/>
                                     <TextInput name="email" placeholder="email" error={errors.email}/>
-                                    <TextInput name="password" placeholder="password" error={errors.password}/>
-                                    <TextInput name="repeatPassword" placeholder="repeat password" error={errors.repeatPassword}/>
+                                    <TextInput name="password" type="password" placeholder="password" error={errors.password}/>
+                                    <TextInput name="repeatPassword" type="password" placeholder="repeat password" error={errors.repeatPassword}/>
                                 </div>
                                 <div className="form-buttons">
                                     <Button type="submit">Login</Button>

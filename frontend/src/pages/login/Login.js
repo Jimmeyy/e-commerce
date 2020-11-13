@@ -3,11 +3,25 @@ import { TextInput, Button, Checkbox, PageBanner } from 'components';
 import { Link } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 import { loginValidate } from 'services';
+import axios from 'axios';
 
 const Login = () => {
 
     const onSubmit = (values, actions) => {
-        console.log(values);
+        const userData = {
+            identifier: values.login,
+            password: values.password,
+        }
+        axios.post(`${process.env.REACT_APP_API_URL}/auth/local`, userData)
+        .then(response => {
+            if (response.status == 200) {
+                alert('Login success');
+                localStorage.setItem('user', JSON.stringify(response.data));
+            }
+        })
+        .catch(error => {
+            alert(`Login failed: ${error.response.data.message[0].messages[0].message}`);
+        });
     }
 
     return (
@@ -29,7 +43,7 @@ const Login = () => {
                             <Form className="form">
                                 <div className="form-inputs">
                                     <TextInput name="login" placeholder="login" error={errors.login}/>
-                                    <TextInput name="password" placeholder="password" error={errors.password}/>
+                                    <TextInput name="password" type="password" placeholder="password" error={errors.password}/>
                                 </div>
                                 <div className="form-buttons">
                                     <Button type="submit">Login</Button>
