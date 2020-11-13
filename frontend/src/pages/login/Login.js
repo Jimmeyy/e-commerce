@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 import { loginValidate } from 'services';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { userLogin as userLoginAction } from 'state/actions/userActions';
 
-const Login = () => {
-
+const Login = ({ userLoginAction }) => {
     const onSubmit = (values, actions) => {
         const userData = {
             identifier: values.login,
@@ -17,6 +18,7 @@ const Login = () => {
             if (response.status == 200) {
                 alert('Login success');
                 localStorage.setItem('user', JSON.stringify(response.data));
+                userLoginAction(response.data);
             }
         })
         .catch(error => {
@@ -63,4 +65,10 @@ const Login = () => {
     );
 };
 
-export default Login;
+function mapDispatchToProps(dispatch) {
+    return {
+        userLoginAction: userData => dispatch(userLoginAction(userData)),
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Login);
